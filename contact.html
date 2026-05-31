@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact &amp; Book a Call — Heart Mind Talent</title>
+<meta name="description" content="Tell us what you're hiring for. Book a 30-minute intro call with Heart Mind Talent." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="icon" type="image/jpeg" href="assets/favicon.jpeg" />
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(48px, 6vw, 120px);
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 56px; }
+  }
+  .detail-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+  }
+  .detail-row:last-child { border-bottom: 1px solid var(--line); }
+  .detail-row .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 4px;
+  }
+  .detail-row .val { font-family: var(--serif); font-size: clamp(20px, 1.8vw, 28px); line-height: 1.2; letter-spacing: -0.01em; }
+  .detail-row .val a { border-bottom: 1px solid var(--line); transition: border-color .2s; }
+  .detail-row .val a:hover { border-color: var(--ink); }
+  .anchor-offset { scroll-margin-top: 96px; }
+</style>
+</head>
+<body>
+
+<div data-header></div>
+
+<main>
+
+  <!-- INTRO -->
+  <section class="section" style="padding-bottom: clamp(40px, 5vw, 64px);">
+    <div class="wrap">
+      <div class="kicker-row reveal">
+        <span class="line"></span>
+        <span class="eyebrow">Contact · Book a call</span>
+      </div>
+      <h1 class="display reveal" style="max-width: 17ch;">
+        Tell us about the <em>team you're building.</em>
+      </h1>
+      <p class="lede reveal" style="margin-top: clamp(32px, 4vw, 56px); max-width: 64ch;">
+        Drop the form below or email us directly. We'll get back within one working day — usually the same day. If we're not the right partner, we'll say so and point you somewhere that is.
+      </p>
+    </div>
+  </section>
+
+  <!-- BOOK / FORM -->
+  <section id="book" class="section-tight divider anchor-offset">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="reveal">
+          <div class="kicker-row" style="margin-bottom: 24px;">
+            <span class="line"></span>
+            <span class="eyebrow">Send a note</span>
+          </div>
+          <form onsubmit="event.preventDefault(); const f=this; f.querySelector('button').innerText='Sent ✓ — we\\'ll be in touch'; f.querySelector('button').disabled=true;" style="display:flex; flex-direction: column; gap: 28px;">
+            <div class="form-row">
+              <div class="field">
+                <label>Your name</label>
+                <input type="text" required placeholder="Jane Founder" />
+              </div>
+              <div class="field">
+                <label>Company</label>
+                <input type="text" required placeholder="Stealth Co." />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label>Work email</label>
+                <input type="email" required placeholder="jane@stealth.co" />
+              </div>
+              <div class="field">
+                <label>Role</label>
+                <select>
+                  <option>Founder / CEO</option>
+                  <option>CTO / VP Eng</option>
+                  <option>Head of Talent / HR</option>
+                  <option>Investor</option>
+                  <option>Candidate</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label>Stage</label>
+                <select>
+                  <option>Stealth / pre-seed</option>
+                  <option>Seed</option>
+                  <option>Series A</option>
+                  <option>Series B</option>
+                  <option>Series C+</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>How many roles in next 6 months?</label>
+                <select>
+                  <option>1–2</option>
+                  <option>3–5</option>
+                  <option>6–10</option>
+                  <option>10+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>What are you hiring for? Anything we should know?</label>
+              <textarea placeholder="Founding engineers, head of ML, GTM lead — and a bit of context on the company."></textarea>
+            </div>
+            <div style="margin-top: 8px;">
+              <button type="submit" class="cta">Send message <span class="cta__arrow">→</span></button>
+            </div>
+            <div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);">
+              We respond within one working day.
+            </div>
+          </form>
+        </div>
+
+        <!-- DETAILS -->
+        <div class="reveal">
+          <div class="kicker-row" style="margin-bottom: 24px;">
+            <span class="line"></span>
+            <span class="eyebrow">Or get in touch directly</span>
+          </div>
+          <div class="detail-row">
+            <div class="label">Email</div>
+            <div class="val"><a href="mailto:admin@heartmindtalent.com">admin@heartmindtalent.com</a></div>
+          </div>
+          <div class="detail-row">
+            <div class="label">Phone</div>
+            <div class="val"><a href="tel:+442073462988">+44 20 7346 2988</a></div>
+          </div>
+          <div class="detail-row">
+            <div class="label">London</div>
+            <div class="val">Ingham Rd<br/>London NW6 1DE<br/>United Kingdom</div>
+          </div>
+          <div class="detail-row">
+            <div class="label">Hours</div>
+            <div class="val" style="font-family: var(--sans); font-size: 16px;">Monday — Friday · 09:00–18:00 GMT</div>
+          </div>
+          <div class="detail-row">
+            <div class="label">Social</div>
+            <div class="val" style="font-family: var(--sans); font-size: 15px; line-height: 2;">
+              <a href="https://www.linkedin.com/company/heart-mind-talent-ltd/" target="_blank" rel="noopener">LinkedIn ↗</a><br/>
+              <a href="https://x.com/HeartMindTalent" target="_blank" rel="noopener">X / Twitter ↗</a>
+            </div>
+          </div>
+
+          <div style="margin-top: 48px; padding: 28px; background: var(--paper); border-radius: 4px; position: relative;">
+            <img src="assets/hmt-mark.jpg" alt="" class="hmt-mark hmt-mark--sm" style="position:absolute; top: 20px; right: 20px;" />
+            <div class="mono" style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">
+              For investors
+            </div>
+            <div style="font-family: var(--serif); font-size: clamp(20px, 1.8vw, 26px); line-height: 1.25; letter-spacing: -0.01em; max-width: calc(100% - 72px);">
+              Sending a portfolio company our way? Email <a href="mailto:admin@heartmindtalent.com" style="border-bottom: 1px solid var(--ink);">admin@heartmindtalent.com</a> with a short intro and we'll prioritise the conversation.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="section">
+    <div class="wrap reveal" style="text-align: center;">
+      <div class="reveal" style="margin-bottom: 24px; display: flex; justify-content: center;">
+        <img src="assets/logo.png" alt="Heart Mind Talent" class="logo-img logo-img--xxl" />
+      </div>
+      <h2 class="display" style="max-width: 18ch; margin: 0 auto;">
+        Talk soon.
+      </h2>
+    </div>
+  </section>
+
+</main>
+
+<div data-footer></div>
+<script src="assets/partials.js"></script>
+</body>
+</html>

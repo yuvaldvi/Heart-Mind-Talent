@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Insights — Heart Mind Talent</title>
+<meta name="description" content="Notes from the field on hiring, talent strategy, and building teams at venture-backed tech companies." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="icon" type="image/jpeg" href="assets/favicon.jpeg" />
+<style>
+  .post {
+    display: grid;
+    grid-template-columns: 110px 1fr 1fr auto;
+    gap: 48px;
+    align-items: baseline;
+    padding: 36px 0;
+    border-top: 1px solid var(--line);
+    cursor: pointer;
+    transition: padding-left .25s;
+  }
+  .post:hover { padding-left: 12px; }
+  .post:last-child { border-bottom: 1px solid var(--line); }
+  .post .date {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .08em;
+    color: var(--muted);
+  }
+  .post .title {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.2vw, 32px);
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+  }
+  .post .title em { font-style: italic; color: var(--muted); }
+  .post .topic {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .post .arrow {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--ink);
+    transition: transform .25s;
+  }
+  .post:hover .arrow { transform: translate(6px, -2px); }
+  @media (max-width: 820px) {
+    .post { grid-template-columns: 1fr auto; gap: 8px; padding: 24px 0; }
+    .post .date { grid-column: 1 / -1; order: 0; }
+    .post .title { grid-column: 1 / -1; order: 1; }
+    .post .topic { display: none; }
+    .post .arrow { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div data-header></div>
+
+<main>
+
+  <!-- INTRO -->
+  <section class="section" style="padding-bottom: clamp(40px, 5vw, 64px);">
+    <div class="wrap">
+      <div class="kicker-row reveal">
+        <span class="line"></span>
+        <span class="eyebrow">Insights · Notes from the field</span>
+      </div>
+      <h1 class="display reveal" style="max-width: 17ch;">
+        Hiring is the <em>most strategic</em> thing you do.
+      </h1>
+      <p class="lede reveal" style="margin-top: clamp(32px, 4vw, 56px); max-width: 64ch;">
+        Field notes from running embedded recruiting inside venture-backed companies. Practical, opinionated, written for founders and the funds backing them.
+      </p>
+    </div>
+  </section>
+
+  <!-- POST LIST (placeholder) -->
+  <section class="section-tight divider">
+    <div class="wrap">
+      <div class="kicker-row reveal" style="margin-bottom: 0;">
+        <span class="line"></span>
+        <span class="eyebrow">Coming soon</span>
+      </div>
+
+      <div class="reveal" style="margin-top: 48px;">
+        <article class="post">
+          <span class="date">Coming soon</span>
+          <span class="title">How to build a <em>hybrid hiring strategy</em> — agent and human.</span>
+          <span class="topic">AI &amp; recruiting</span>
+          <span class="arrow">→</span>
+        </article>
+        <article class="post">
+          <span class="date">Coming soon</span>
+          <span class="title">How the first <em>five engineers</em> set the technical worldview of your company.</span>
+          <span class="topic">Founding team</span>
+          <span class="arrow">→</span>
+        </article>
+        <article class="post">
+          <span class="date">Coming soon</span>
+          <span class="title">Why <em>time-to-hire</em> is the wrong metric to optimise for.</span>
+          <span class="topic">Process</span>
+          <span class="arrow">→</span>
+        </article>
+        <article class="post">
+          <span class="date">Coming soon</span>
+          <span class="title">The <em>compensation conversation</em>: what European founders consistently get wrong.</span>
+          <span class="topic">Compensation</span>
+          <span class="arrow">→</span>
+        </article>
+        <article class="post">
+          <span class="date">Coming soon</span>
+          <span class="title">Hiring in stealth: how to convince <em>great people</em> to join a company they can't talk about.</span>
+          <span class="topic">Founder hiring</span>
+          <span class="arrow">→</span>
+        </article>
+        <article class="post">
+          <span class="date">Coming soon</span>
+          <span class="title">EOR or entity? A practical guide to <em>hiring across borders</em> at Series A.</span>
+          <span class="topic">International</span>
+          <span class="arrow">→</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section">
+    <div class="wrap" style="max-width: 900px; text-align: center;" class="reveal">
+      <div class="reveal" style="margin-bottom: 24px; display: flex; justify-content: center;">
+        <img src="assets/logo.png" alt="Heart Mind Talent" class="logo-img logo-img--xxl" />
+      </div>
+      <h2 class="h-xl" style="max-width: 18ch; margin: 0 auto;">
+        Get our <em>first essay</em> in your inbox.
+      </h2>
+      <p class="lede" style="margin: 24px auto 0; max-width: 52ch;">
+        We're publishing soon. Drop your email and you'll be first to read — no marketing, no noise, just the writing.
+      </p>
+      <div id="beehiiv-subscribe" style="max-width: 480px; margin: 40px auto 0;">
+        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="3a1df576-1486-4359-aadd-7efec6613b88"></script>
+      </div>
+      <div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:20px;">
+        We only write when we have something worth saying.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-footer></div>
+<script src="assets/partials.js"></script>
+</body>
+</html>
