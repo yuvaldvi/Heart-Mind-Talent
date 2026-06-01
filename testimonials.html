@@ -231,6 +231,8 @@
   }
   a.logo-cell { cursor: pointer; }
   .logo-cell:hover { background: var(--paper); }
+  /* Logos are display-only links — don't let the image-slot capture clicks/drops */
+  .logo-cell image-slot { pointer-events: none; }
   .logo-cell image-slot {
     width: 100%;
     height: 100%;
@@ -533,30 +535,30 @@
       </h2>
 
       <div class="logo-wall logo-wall--dark reveal" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="logo-cell">
+        <a class="logo-cell" href="https://www.bvp.com" target="_blank" rel="noopener">
           <image-slot id="vc-bessemer" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Bessemer<span class="sub">Venture Partners</span></div>
-        </div>
-        <div class="logo-cell">
+        </a>
+        <a class="logo-cell" href="https://www.indexventures.com" target="_blank" rel="noopener">
           <image-slot id="vc-index" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Index Ventures<span class="sub">Global</span></div>
-        </div>
-        <div class="logo-cell">
+        </a>
+        <a class="logo-cell" href="https://www.balderton.com" target="_blank" rel="noopener">
           <image-slot id="vc-balderton" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Balderton<span class="sub">European tech</span></div>
-        </div>
-        <div class="logo-cell">
+        </a>
+        <a class="logo-cell" href="https://www.atomico.com" target="_blank" rel="noopener">
           <image-slot id="vc-atomico" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Atomico<span class="sub">Series A+</span></div>
-        </div>
-        <div class="logo-cell">
+        </a>
+        <a class="logo-cell" href="https://visionaries.vc" target="_blank" rel="noopener">
           <image-slot id="vc-visionaries" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Visionaries<em>.vc</em><span class="sub">Early stage</span></div>
-        </div>
-        <div class="logo-cell">
+        </a>
+        <a class="logo-cell" href="https://www.angularventures.com" target="_blank" rel="noopener">
           <image-slot id="vc-angular" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Angular Ventures<span class="sub">Deep tech seed</span></div>
-        </div>
+        </a>
       </div>
     </div>
   </section>

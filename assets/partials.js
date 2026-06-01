@@ -29,9 +29,35 @@ function renderHeader() {
           ${NAV.map(n => `<a href="${n.href}" class="${cur===n.href?'active':''}">${n.label}</a>`).join("")}
           <a href="contact.html#book" class="cta">Book a call <span class="cta__arrow">→</span></a>
         </nav>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-menu__nav" aria-label="Mobile">
+        ${NAV.map(n => `<a href="${n.href}" class="${cur===n.href?'active':''}">${n.label}</a>`).join("")}
+        <a href="contact.html#book" class="cta">Book a call <span class="cta__arrow">→</span></a>
+      </nav>
+    </div>
   `;
+
+  // Mobile menu toggle
+  const toggle = el.querySelector(".nav-toggle");
+  const menu = el.querySelector(".mobile-menu");
+  if (toggle && menu) {
+    const setOpen = (open) => {
+      toggle.classList.toggle("open", open);
+      menu.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      document.body.style.overflow = open ? "hidden" : "";
+    };
+    toggle.addEventListener("click", () => setOpen(!menu.classList.contains("open")));
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setOpen(false)));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+    window.addEventListener("resize", () => { if (window.innerWidth > 1040) setOpen(false); });
+  }
 }
 
 function renderFooter() {
