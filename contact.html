@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Contact &amp; Book a Call - Heart Mind Talent</title>
 <meta name="description" content="Tell us what you're hiring for. Book a 30-minute intro call with Heart Mind Talent." />
+<link rel="canonical" href="https://heartmindtalent.com/contact" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Heart Mind Talent" />
+<meta property="og:title" content="Contact &amp; Book a Call - Heart Mind Talent" />
+<meta property="og:description" content="Tell us what you're hiring for. Book a 30-minute intro call with Heart Mind Talent." />
+<meta property="og:url" content="https://heartmindtalent.com/contact" />
+<meta property="og:image" content="https://heartmindtalent.com/assets/photos/team-couch.jpg" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="1067" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact &amp; Book a Call - Heart Mind Talent" />
+<meta name="twitter:description" content="Tell us what you're hiring for. Book a 30-minute intro call with Heart Mind Talent." />
+<meta name="twitter:image" content="https://heartmindtalent.com/assets/photos/team-couch.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -75,25 +88,27 @@
             <span class="line"></span>
             <span class="eyebrow">Send a note</span>
           </div>
-          <form onsubmit="event.preventDefault(); const f=this; f.querySelector('button').innerText='Sent ✓ - we\\'ll be in touch'; f.querySelector('button').disabled=true;" style="display:flex; flex-direction: column; gap: 28px;">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:flex; flex-direction: column; gap: 28px;">
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
             <div class="form-row">
               <div class="field">
                 <label>Your name</label>
-                <input type="text" required placeholder="Jane Founder" />
+                <input type="text" name="name" required placeholder="Jane Founder" />
               </div>
               <div class="field">
                 <label>Company</label>
-                <input type="text" required placeholder="Stealth Co." />
+                <input type="text" name="company" required placeholder="Stealth Co." />
               </div>
             </div>
             <div class="form-row">
               <div class="field">
                 <label>Work email</label>
-                <input type="email" required placeholder="jane@stealth.co" />
+                <input type="email" name="email" required placeholder="jane@stealth.co" />
               </div>
               <div class="field">
                 <label>Role</label>
-                <select>
+                <select name="role">
                   <option>Founder / CEO</option>
                   <option>CTO / VP Eng</option>
                   <option>Head of Talent / HR</option>
@@ -106,7 +121,7 @@
             <div class="form-row">
               <div class="field">
                 <label>Stage</label>
-                <select>
+                <select name="stage">
                   <option>Stealth / pre-seed</option>
                   <option>Seed</option>
                   <option>Series A</option>
@@ -116,7 +131,7 @@
               </div>
               <div class="field">
                 <label>How many roles in next 6 months?</label>
-                <select>
+                <select name="roles-next-6-months">
                   <option>1-2</option>
                   <option>3-5</option>
                   <option>6-10</option>
@@ -127,7 +142,7 @@
             </div>
             <div class="field">
               <label>What are you hiring for? Anything we should know?</label>
-              <textarea placeholder="Founding engineers, head of ML, GTM lead - and a bit of context on the company."></textarea>
+              <textarea name="message" placeholder="Founding engineers, head of ML, GTM lead - and a bit of context on the company."></textarea>
             </div>
             <div style="margin-top: 8px;">
               <button type="submit" class="cta">Send message <span class="cta__arrow">→</span></button>

@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Testimonials - Heart Mind Talent</title>
 <meta name="description" content="What founders and tech leaders say about working with Heart Mind Talent - from stealth-stage AI labs to scale-up engineering teams." />
+<link rel="canonical" href="https://heartmindtalent.com/testimonials" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Heart Mind Talent" />
+<meta property="og:title" content="Testimonials - Heart Mind Talent" />
+<meta property="og:description" content="What founders and tech leaders say about working with Heart Mind Talent - from stealth-stage AI labs to scale-up engineering teams." />
+<meta property="og:url" content="https://heartmindtalent.com/testimonials" />
+<meta property="og:image" content="https://heartmindtalent.com/assets/photos/team-couch.jpg" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="1067" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Testimonials - Heart Mind Talent" />
+<meta name="twitter:description" content="What founders and tech leaders say about working with Heart Mind Talent - from stealth-stage AI labs to scale-up engineering teams." />
+<meta name="twitter:image" content="https://heartmindtalent.com/assets/photos/team-couch.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -231,18 +244,19 @@
   }
   a.logo-cell { cursor: pointer; }
   .logo-cell:hover { background: var(--paper); }
-  /* Logos are display-only links - don't let the image-slot capture clicks/drops */
-  .logo-cell image-slot { pointer-events: none; }
-  .logo-cell image-slot {
+  /* Logos are display-only links - don't let the image capture clicks */
+  .logo-cell img { pointer-events: none; }
+  .logo-cell img {
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: contain;
     /* Soft monochrome so colourful logos read consistently next to each other */
     filter: grayscale(1) contrast(1.02);
     -webkit-filter: grayscale(1) contrast(1.02);
     transition: filter .25s;
   }
-  .logo-cell:hover image-slot {
+  .logo-cell:hover img {
     filter: none;
     -webkit-filter: none;
   }
@@ -276,10 +290,6 @@
     margin-top: 6px;
     font-style: normal;
   }
-  /* When user drops a logo, hide the wordmark */
-  .logo-cell image-slot[data-has-image] ~ .wm,
-  .logo-cell image-slot.has-image ~ .wm { display: none; }
-
   .logo-cell--banner {
     background: var(--paper);
     padding: 28px;
@@ -299,7 +309,7 @@
   .logo-wall--dark .logo-cell .wm { color: #fff; }
   .logo-wall--dark .logo-cell .wm em { color: #888; }
   .logo-wall--dark .logo-cell .wm .sub { color: #6a6a6a; }
-  .logo-wall--dark .logo-cell image-slot {
+  .logo-wall--dark .logo-cell img {
     filter: grayscale(1) contrast(1.1) brightness(10) invert(0);
     -webkit-filter: grayscale(1) contrast(1.1) brightness(10) invert(0);
   }
@@ -461,57 +471,57 @@
         The companies <em>we've helped build.</em>
       </h2>
       <p class="lede reveal" style="margin-top: 24px; max-width: 60ch;">
-        From stealth-stage AI labs to growth-stage deep-tech. A representative slice - drop real logos onto any tile to replace the wordmark.
+        From stealth-stage AI labs to growth-stage deep-tech. A selection of the companies we have hired for.
       </p>
 
       <div class="logo-wall reveal" style="grid-template-columns: repeat(4, 1fr);">
         <a class="logo-cell" href="https://convergence.ai" target="_blank" rel="noopener">
-          <image-slot id="logo-convergence" shape="rect" placeholder="" fit="contain" src="assets/logos/convergence.jpeg"></image-slot>
+          <img src="assets/logos/convergence.jpeg" alt="Convergence" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://mazehq.com" target="_blank" rel="noopener">
-          <image-slot id="logo-mazehq" shape="rect" placeholder="" fit="contain" src="assets/logos/mazehq.png"></image-slot>
+          <img src="assets/logos/mazehq.png" alt="Mazehq" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://getapron.com" target="_blank" rel="noopener">
-          <image-slot id="logo-apron" shape="rect" placeholder="" fit="contain" src="assets/logos/apron.png"></image-slot>
+          <img src="assets/logos/apron.png" alt="Apron" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://dash0.com" target="_blank" rel="noopener">
-          <image-slot id="logo-dash0" shape="rect" placeholder="" fit="contain" src="assets/logos/dash0.png"></image-slot>
+          <img src="assets/logos/dash0.png" alt="Dash0" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://priorlabs.ai" target="_blank" rel="noopener">
-          <image-slot id="logo-prior" shape="rect" placeholder="" fit="contain" src="assets/logos/prior.png"></image-slot>
+          <img src="assets/logos/prior.png" alt="Prior Labs" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://fundamental.tech/" target="_blank" rel="noopener">
-          <image-slot id="logo-fundamental" shape="rect" placeholder="" fit="contain" src="assets/logos/fundamental.png"></image-slot>
+          <img src="assets/logos/fundamental.png" alt="Fundamental" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://surrealdb.com" target="_blank" rel="noopener">
-          <image-slot id="logo-surrealdb" shape="rect" placeholder="" fit="contain" src="assets/logos/surrealdb.png"></image-slot>
+          <img src="assets/logos/surrealdb.png" alt="SurrealDB" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://fyxer.com" target="_blank" rel="noopener">
-          <image-slot id="logo-fyxer" shape="rect" placeholder="" fit="contain" src="assets/logos/fyxer.png"></image-slot>
+          <img src="assets/logos/fyxer.png" alt="Fyxer" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://lawhive.co.uk" target="_blank" rel="noopener">
-          <image-slot id="logo-lawhive" shape="rect" placeholder="" fit="contain" src="assets/logos/lawhive.png"></image-slot>
+          <img src="assets/logos/lawhive.png" alt="Lawhive" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://forgent.ai" target="_blank" rel="noopener">
-          <image-slot id="logo-forgent" shape="rect" placeholder="" fit="contain" src="assets/logos/forgent.png"></image-slot>
+          <img src="assets/logos/forgent.png" alt="Forgent" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://levity.ai" target="_blank" rel="noopener">
-          <image-slot id="logo-levity" shape="rect" placeholder="" fit="contain" src="assets/logos/levity.png"></image-slot>
+          <img src="assets/logos/levity.png" alt="Levity" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://eragon.ai" target="_blank" rel="noopener">
-          <image-slot id="logo-eragon" shape="rect" placeholder="" fit="contain" src="assets/logos/eragon.png"></image-slot>
+          <img src="assets/logos/eragon.png" alt="Eragon" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://nousresearch.com" target="_blank" rel="noopener">
-          <image-slot id="logo-nous" shape="rect" placeholder="" fit="contain" src="assets/logos/nous.jpeg"></image-slot>
+          <img src="assets/logos/nous.jpeg" alt="Nous Research" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://portchain.com" target="_blank" rel="noopener">
-          <image-slot id="logo-portchain" shape="rect" placeholder="" fit="contain" src="assets/logos/portchain.png"></image-slot>
+          <img src="assets/logos/portchain.png" alt="Portchain" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://doorloop.com" target="_blank" rel="noopener">
-          <image-slot id="logo-doorloop" shape="rect" placeholder="" fit="contain" src="assets/logos/doorloop.png"></image-slot>
+          <img src="assets/logos/doorloop.png" alt="DoorLoop" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://kulipa.com" target="_blank" rel="noopener">
-          <image-slot id="logo-kulipa" shape="rect" placeholder="" fit="contain" src="assets/logos/kulipa.png"></image-slot>
+          <img src="assets/logos/kulipa.png" alt="Kulipa" loading="lazy" decoding="async" />
         </a>
         <a class="logo-cell" href="https://www.sony.com" target="_blank" rel="noopener">
           <div class="wm">Sony<span class="sub">Enterprise</span></div>
@@ -536,27 +546,21 @@
 
       <div class="logo-wall logo-wall--dark reveal" style="grid-template-columns: repeat(3, 1fr);">
         <a class="logo-cell" href="https://www.bvp.com" target="_blank" rel="noopener">
-          <image-slot id="vc-bessemer" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Bessemer<span class="sub">Venture Partners</span></div>
         </a>
         <a class="logo-cell" href="https://www.indexventures.com" target="_blank" rel="noopener">
-          <image-slot id="vc-index" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Index Ventures<span class="sub">Global</span></div>
         </a>
         <a class="logo-cell" href="https://www.balderton.com" target="_blank" rel="noopener">
-          <image-slot id="vc-balderton" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Balderton<span class="sub">European tech</span></div>
         </a>
         <a class="logo-cell" href="https://www.atomico.com" target="_blank" rel="noopener">
-          <image-slot id="vc-atomico" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Atomico<span class="sub">Series A+</span></div>
         </a>
         <a class="logo-cell" href="https://visionaries.vc" target="_blank" rel="noopener">
-          <image-slot id="vc-visionaries" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Visionaries<em>.vc</em><span class="sub">Early stage</span></div>
         </a>
         <a class="logo-cell" href="https://www.angularventures.com" target="_blank" rel="noopener">
-          <image-slot id="vc-angular" shape="rect" placeholder="" fit="contain"></image-slot>
           <div class="wm">Angular Ventures<span class="sub">Deep tech seed</span></div>
         </a>
       </div>
@@ -610,7 +614,6 @@
 </main>
 
 <div data-footer></div>
-<script src="assets/image-slot.js"></script>
 <script src="assets/partials.js"></script>
 </body>
 </html>
