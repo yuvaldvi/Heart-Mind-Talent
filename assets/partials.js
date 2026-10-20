@@ -6,7 +6,7 @@ const NAV = [
   { label: "Case Studies", href: "case-studies.html" },
   { label: "Testimonials", href: "testimonials.html" },
   { label: "How We Work", href: "how-we-work.html" },
-  { label: "Insights", href: "insights.html" },
+  // { label: "Insights", href: "insights.html" }, // hidden until articles are live
   { label: "Contact", href: "contact.html" },
 ];
 
@@ -27,7 +27,7 @@ function renderHeader() {
         </a>
         <nav class="nav" aria-label="Primary">
           ${NAV.map(n => `<a href="${n.href}" class="${cur===n.href?'active':''}">${n.label}</a>`).join("")}
-          <a href="contact.html#book" class="cta">Book a call <span class="cta__arrow">→</span></a>
+          <a href="https://calendar.app.google/wt2yxnA5KH1h99Gd8" target="_blank" rel="noopener" class="cta">Book a call <span class="cta__arrow">→</span></a>
         </nav>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
@@ -37,7 +37,7 @@ function renderHeader() {
     <div class="mobile-menu" id="mobile-menu">
       <nav class="mobile-menu__nav" aria-label="Mobile">
         ${NAV.map(n => `<a href="${n.href}" class="${cur===n.href?'active':''}">${n.label}</a>`).join("")}
-        <a href="contact.html#book" class="cta">Book a call <span class="cta__arrow">→</span></a>
+        <a href="https://calendar.app.google/wt2yxnA5KH1h99Gd8" target="_blank" rel="noopener" class="cta">Book a call <span class="cta__arrow">→</span></a>
       </nav>
     </div>
   `;
@@ -69,7 +69,7 @@ function renderFooter() {
         <div class="site-footer__top">
           <div>
             <div class="site-footer__big">Hire the people <em>building the future.</em></div>
-            <a href="contact.html#book" class="cta" style="background:#fff;color:#0a0a0a;border-color:#fff;">Book a call <span class="cta__arrow">→</span></a>
+            <a href="https://calendar.app.google/wt2yxnA5KH1h99Gd8" target="_blank" rel="noopener" class="cta" style="background:#fff;color:#0a0a0a;border-color:#fff;">Book a call <span class="cta__arrow">→</span></a>
           </div>
           <div class="footer-col">
             <h5>Navigate</h5>
@@ -79,7 +79,7 @@ function renderFooter() {
               <li><a href="case-studies.html">Case Studies</a></li>
               <li><a href="testimonials.html">Testimonials</a></li>
               <li><a href="how-we-work.html">How We Work</a></li>
-              <li><a href="insights.html">Insights</a></li>
+              <!-- <li><a href="insights.html">Insights</a></li> hidden until articles are live -->
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -96,7 +96,7 @@ function renderFooter() {
             <ul>
               <li><a href="https://www.linkedin.com/company/heart-mind-talent-ltd/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
               <li><a href="https://x.com/HeartMindTalent" target="_blank" rel="noopener">X / Twitter ↗</a></li>
-              <li><a href="insights.html#beehiiv-subscribe">Subscribe to Insights ↗</a></li>
+              <!-- <li><a href="insights.html#beehiiv-subscribe">Subscribe to Insights ↗</a></li> hidden until articles are live -->
             </ul>
           </div>
         </div>
