@@ -324,6 +324,11 @@
   .logo-section--dark .h-xl em { color: #fff; }
   .logo-section--dark .h-xl em { color: #888; }
   .logo-section--dark .lede { color: #c9c4ba; }
+
+  /* v-diagram restyle: quote grid as stack cards */
+  .quote-grid{background:#ECE6DA;padding:12px;gap:12px;border-top:none!important;}
+  .qcard{background:#F6F2EA;border:1px solid rgba(21,21,21,.10)!important;}
+  .qcard:hover{background:#FBF8F2;}
 </style>
 <script type="application/ld+json">
 {
@@ -605,7 +610,7 @@
 
       <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 48px); margin-top: clamp(48px, 6vw, 96px);" class="reveal">
         <div class="stat">
-          <div class="stat__num">90<em>%</em></div>
+          <div class="stat__num">94<em>%</em></div>
           <div class="stat__label">of clients return for their next round of hiring</div>
         </div>
         <div class="stat">
@@ -630,8 +635,8 @@
         On request, we'll connect you with a founder we've hired for - at your stage, in your space. They'll tell you the honest version.
       </p>
       <div style="margin-top: 48px; display:flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="contact.html#book" class="cta">Request a reference <span class="cta__arrow">→</span></a>
-        <a href="case-studies.html" class="cta-ghost">Read the case studies</a>
+        <a class='cta' href='contact.html#book'>Request a reference <span class="cta__arrow">→</span></a>
+        <a class='cta-ghost' href='case-studies.html'>Read the case studies</a>
       </div>
     </div>
   </section>
