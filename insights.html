@@ -70,6 +70,29 @@
     .post .topic { display: none; }
     .post .arrow { display: none; }
   }
+
+  /* v-diagram restyle: highlight the agent + human post */
+  .post.post--hl{background:#DCCDB2;border:1px solid #B08D57;padding-left:20px;padding-right:20px;margin-left:-21px;margin-right:-21px;}
+
+  /* LinkedIn post cards */
+  .li-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;background:#ECE6DA;padding:12px;}
+  @media (max-width:820px){.li-grid{grid-template-columns:1fr;}}
+  .li-card{background:#F6F2EA;border:1px solid rgba(21,21,21,.10);padding:clamp(22px,2.4vw,32px);display:grid;grid-template-columns:minmax(0,1fr);gap:20px;min-width:0;}
+  .li-card--img{grid-template-columns:minmax(0,1fr) 112px;}
+  .li-card--hl{background:#DCCDB2;border-color:#B08D57;}
+  .li-card__body{display:flex;flex-direction:column;gap:12px;min-width:0;}
+  .li-card__meta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+  .li-card--hl .li-card__meta{color:#7A5F33;}
+  .li-card__title{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,30px);line-height:1.15;letter-spacing:-0.01em;margin:0;}
+  .li-card__ex{font-size:15px;line-height:1.55;color:#4A4339;margin:0;}
+  .li-card__link{margin-top:auto;padding-top:6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start;}
+  .li-card__link span{display:inline-block;transition:transform .2s;}
+  .li-card__link:hover span{transform:translate(2px,-2px);}
+  .li-card__img{width:112px;height:112px;overflow:hidden;background:#ECE6DA;}
+  .li-card__img img{width:100%;height:100%;object-fit:cover;display:block;}
+  @media (max-width:480px){.li-card--img{grid-template-columns:minmax(0,1fr) 84px;gap:14px;}.li-card__img{width:84px;height:84px;}}
+  /* keep highlighted placeholder row inside the page on small screens */
+  @media (max-width:767px){.post.post--hl{margin-left:0;margin-right:0;padding-left:14px;padding-right:14px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -119,6 +142,69 @@
     </div>
   </section>
 
+  <!-- FROM LINKEDIN: recent posts by the founder -->
+  <section class="section-tight divider" id="linkedin-posts">
+    <div class="wrap">
+      <div class="kicker-row reveal" style="margin-bottom: 0;">
+        <span class="line"></span>
+        <span class="eyebrow">Latest · From Lital Zigelboim-Dvir on LinkedIn</span>
+      </div>
+      <div class="li-grid reveal" style="margin-top: 40px;">
+          <article class="li-card li-card--hl">
+            <div class="li-card__body">
+              <div class="li-card__meta">6 Nov 2026 · AI &amp; recruiting</div>
+              <h3 class="li-card__title">AI makes talent easier to find, not easier to reach</h3>
+              <p class="li-card__ex">A personalised message can open a conversation. It isn’t a relationship yet. Are we using the time AI saves us to understand people better, or just to send more messages?</p>
+              <a class="li-card__link" href="https://www.linkedin.com/posts/lital-zigelboim-dvir-4a80ab5_airecruitment-talentacquisition-startuphiring-activity-7524419617432182784-NOlS" target="_blank" rel="noopener">Read on LinkedIn <span>↗</span></a>
+            </div>
+          </article>
+          <article class="li-card">
+            <div class="li-card__body">
+              <div class="li-card__meta">3 Nov 2026 · Founding team</div>
+              <h3 class="li-card__title">Why the first technical hire matters most</h3>
+              <p class="li-card__ex">Your first engineer doesn’t just build the product. They shape how the team thinks, decides and ships.</p>
+              <a class="li-card__link" href="https://www.linkedin.com/posts/lital-zigelboim-dvir-4a80ab5_aistartups-hiring-foundingteam-activity-7523360811298242560-BTEA" target="_blank" rel="noopener">Read on LinkedIn <span>↗</span></a>
+            </div>
+          </article>
+          <article class="li-card li-card--img">
+            <div class="li-card__body">
+              <div class="li-card__meta">22 Oct 2026 · AI roles</div>
+              <h3 class="li-card__title">Six lessons from hiring forward deployed engineers</h3>
+              <p class="li-card__ex">Over the past year we’ve built FDE and FDR teams for several AI startups. The best FDEs bring technical depth, customer communication and ownership together.</p>
+              <a class="li-card__link" href="https://www.linkedin.com/posts/lital-zigelboim-dvir-4a80ab5_ai-hiring-forwarddeployedengineers-activity-7518987165062856704-3_2x" target="_blank" rel="noopener">Read on LinkedIn <span>↗</span></a>
+            </div>
+            <div class="li-card__img"><img src="assets/photos/li-fde.jpg" alt="" loading="lazy" decoding="async" /></div>
+          </article>
+          <article class="li-card">
+            <div class="li-card__body">
+              <div class="li-card__meta">21 Oct 2026 · Open search</div>
+              <h3 class="li-card__title">Now searching: a founding engineer for an agent-first team</h3>
+              <p class="li-card__ex">If you have deep engineering judgment, think agent-first and want to build something new from day one, this is a rare chance to be the founding engineer next to an exceptional team.</p>
+              <a class="li-card__link" href="https://www.linkedin.com/posts/lital-zigelboim-dvir-4a80ab5_foundingengineer-ai-agents-activity-7518650580098134016-BjJs" target="_blank" rel="noopener">Read on LinkedIn <span>↗</span></a>
+            </div>
+          </article>
+          <article class="li-card li-card--img">
+            <div class="li-card__body">
+              <div class="li-card__meta">28 Sep 2026 · Team</div>
+              <h3 class="li-card__title">Our strongest week: 11 offers out, 9 accepted</h3>
+              <p class="li-card__ex">This wasn’t luck. It was the team. Do right by the client, do right by the candidate, and don’t drop the quality bar.</p>
+              <a class="li-card__link" href="https://www.linkedin.com/posts/lital-zigelboim-dvir-4a80ab5_hiring-startups-aihiring-activity-7510331479063830528-RX4I" target="_blank" rel="noopener">Read on LinkedIn <span>↗</span></a>
+            </div>
+            <div class="li-card__img"><img src="assets/photos/li-strongest-week.jpg" alt="" loading="lazy" decoding="async" /></div>
+          </article>
+          <article class="li-card li-card--img">
+            <div class="li-card__body">
+              <div class="li-card__meta">3 Jun 2026 · Clients</div>
+              <h3 class="li-card__title">Why clients come back to us</h3>
+              <p class="li-card__ex">In the recruitment industry, repeat business is the clearest indicator that you’re doing something right.</p>
+              <a class="li-card__link" href="https://www.linkedin.com/posts/lital-zigelboim-dvir-4a80ab5_techrecruitment-startuphiring-talentacquisition-activity-7467876270974996480-d-zL" target="_blank" rel="noopener">Read on LinkedIn <span>↗</span></a>
+            </div>
+            <div class="li-card__img"><img src="assets/photos/li-clients-back.jpg" alt="" loading="lazy" decoding="async" /></div>
+          </article>
+      </div>
+    </div>
+  </section>
+
   <!-- POST LIST (placeholder) -->
   <section class="section-tight divider">
     <div class="wrap">
@@ -128,7 +214,7 @@
       </div>
 
       <div class="reveal" style="margin-top: 48px;">
-        <article class="post">
+        <article class="post post--hl">
           <span class="date">Coming soon</span>
           <span class="title">How to build a <em>hybrid hiring strategy</em> - agent and human.</span>
           <span class="topic">AI &amp; recruiting</span>
